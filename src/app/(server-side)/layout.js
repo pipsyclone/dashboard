@@ -16,28 +16,28 @@ export default function DashboardLayout({ children }) {
   const { widthSize, showHideSidebar, setShowHideSidebar } = Script()
   return (
     <html lang="en">
-      <LoadingProviders>
-        <body className={inter.className}>
-          <div className="row">
-            <Sidebar sidebarShow={showHideSidebar} onClickSidebarShow={() => setShowHideSidebar(!showHideSidebar)} />
+      {/* <LoadingProviders> */}
+      <body className={inter.className}>
+        <div className="row">
+          <Sidebar sidebarShow={showHideSidebar} onClickSidebarShow={() => setShowHideSidebar(!showHideSidebar)} />
 
-            <div className={
-              widthSize <= 850 ?
-                'content'
+          <div className={
+            widthSize <= 850 ?
+              'content'
+              :
+              showHideSidebar ?
+                "content"
                 :
-                showHideSidebar ?
-                  "content"
-                  :
-                  "content-full"
-            }>
-              <TopBar onClickSidebarShow={() => setShowHideSidebar(!showHideSidebar)} username="Apip Rahman S" />
+                "content-full"
+          }>
+            <TopBar onClickSidebarShow={() => setShowHideSidebar(!showHideSidebar)} username="Apip Rahman S" />
 
-              {/* Content Here */}
-              {children}
-            </div>
+            {/* Content Here */}
+            {children}
           </div>
-        </body>
-      </LoadingProviders>
+        </div>
+      </body>
+      {/* </LoadingProviders> */}
     </html>
   );
 }
