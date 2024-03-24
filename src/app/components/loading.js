@@ -4,7 +4,7 @@ export default function Loading() {
     return (
         <div className="loading">
             <div className='loading-content'>
-                <span>Loading ...</span>
+                Loading ...
             </div>
         </div>
     )

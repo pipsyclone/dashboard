@@ -1,6 +1,5 @@
 import { useState, useMemo } from "react";
 import DataTable from "react-data-table-component";
-import ButtonCustom from "./ButtonCustom";
 
 const DataTables = () => {
     const customStyles = {
@@ -125,7 +124,7 @@ const DataTables = () => {
             data={filteredItems}
             conditionalRowStyles={conditionalData}
             pagination
-            paginationComponentOptions={paginationComponentOptions}
+            // paginationComponentOptions={paginationComponentOptions}
             customStyles={customStyles}
             dense
             subHeader

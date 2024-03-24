@@ -15,8 +15,8 @@ const inter = Inter({ subsets: ['latin'] })
 export default function DashboardLayout({ children }) {
   const { widthSize, showHideSidebar, setShowHideSidebar } = Script()
   return (
+    // <LoadingProviders>
     <html lang="en">
-      {/* <LoadingProviders> */}
       <body className={inter.className}>
         <div className="row">
           <Sidebar sidebarShow={showHideSidebar} onClickSidebarShow={() => setShowHideSidebar(!showHideSidebar)} />
@@ -37,7 +37,7 @@ export default function DashboardLayout({ children }) {
           </div>
         </div>
       </body>
-      {/* </LoadingProviders> */}
     </html>
+    // </LoadingProviders>
   );
 }

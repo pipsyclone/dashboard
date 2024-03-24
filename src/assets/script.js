@@ -6,16 +6,18 @@ const Script = () => {
     const [showHideSidebar, setShowHideSidebar] = useState(true)
 
     // Check window size
-    const [widthSize, setWidthSize] = useState(window.innerWidth)
-    const [heightSize, setHeightSize] = useState(window.innerHeight)
+    const [widthSize, setWidthSize] = useState(1200)
+    const [heightSize, setHeightSize] = useState(1200)
     useEffect(() => {
-        const realtimeSize = () => {
-            setWidthSize(window.innerWidth)
-            setHeightSize(window.innerHeight)
-        }
-        window.addEventListener('resize', realtimeSize)
-        return () => {
+        if (typeof window !== 'undefined') {
+            const realtimeSize = () => {
+                setWidthSize(window.innerWidth)
+                setHeightSize(window.innerHeight)
+            }
             window.addEventListener('resize', realtimeSize)
+            return () => {
+                window.addEventListener('resize', realtimeSize)
+            }
         }
     }, [])
 

@@ -12,11 +12,9 @@ const TopBar = (props) => {
 
             <ul className="topbar-list">
                 <li className="topbar-item">
-                    <a href="/settings" className="topbar-link">
-                        <div className="topbar-profile">
-                            <Image src={imagUser} width={25} alt="User Image" />
-                            <span>Hi, {props.username}</span>
-                        </div>
+                    <a href="/settings" className="topbar-link topbar-profile">
+                        <Image src={imagUser} width={25} alt="User Image" />
+                        Hi, {props.username}
                     </a>
                 </li>
             </ul>
