@@ -11,6 +11,10 @@
     height: 100%;
 } */
 
+nextjs-portal {
+    display: none;
+}
+
 body {
     background-color: #f1f5f9;
     position: relative;

@@ -75,12 +75,7 @@
 
 /* Sidebar */
 .background-sidebar {
-    position: fixed;
-    background-color: #212b36;
-    opacity: 0.5;
-    z-index: 99;
-    width: 100%;
-    height: 100vh;
+    display: none;
 }
 
 aside {
@@ -131,16 +126,20 @@ aside .nav-list {
     color: #fff;
 }
 
+.nav-list .nav-item:nth-last-child(1) {
+    display: none;
+}
+
 .nav-list .nav-icon {
     width: 50px;
     text-align: center;
 }
 
-.show-sidebar {
+.sidebar-desktop {
     margin-left: 0px;
 }
 
-.hide-sidebar {
+.sidebar-responsive {
     margin-left: -250px;
 }
 
@@ -268,6 +267,28 @@ footer {
 
 /* Responsive */
 @media screen and (max-width: 850px) {
+    .sidebar-desktop {
+        margin-left: -250px;
+    }
+
+    .sidebar-responsive {
+        margin-left: 0px;
+    }
+
+    .background-sidebar {
+        display: block;
+        position: fixed;
+        background-color: #212b36;
+        opacity: 0.5;
+        z-index: 99;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .nav-list .nav-item:nth-last-child(1) {
+        display: block;
+    }
+
     .content {
         margin-left: 0px;
     }

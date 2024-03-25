@@ -5,22 +5,6 @@ const Script = () => {
     // Show Hide Sidebar
     const [showHideSidebar, setShowHideSidebar] = useState(true)
 
-    // Check window size
-    const [widthSize, setWidthSize] = useState(1200)
-    const [heightSize, setHeightSize] = useState(1200)
-    useEffect(() => {
-        if (typeof window !== 'undefined') {
-            const realtimeSize = () => {
-                setWidthSize(window.innerWidth)
-                setHeightSize(window.innerHeight)
-            }
-            window.addEventListener('resize', realtimeSize)
-            return () => {
-                window.addEventListener('resize', realtimeSize)
-            }
-        }
-    }, [])
-
     // Sweetalert 2
     // Alert
     const handleAlert = (icon, title, message) => {
@@ -33,7 +17,6 @@ const Script = () => {
 
     return {
         showHideSidebar, setShowHideSidebar,
-        widthSize, heightSize,
         handleAlert
     }
 }

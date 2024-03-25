@@ -1,7 +1,6 @@
 'use client'
 import Image from "next/image";
 import imagUser from "./../../assets/image/user.png"
-import Script from "@/assets/script";
 
 const TopBar = (props) => {
     return (
