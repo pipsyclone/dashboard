@@ -15,21 +15,21 @@ const inter = Inter({ subsets: ['latin'] })
 export default function DashboardLayout({ children }) {
   const { showHideSidebar, setShowHideSidebar } = Script()
   return (
-    <LoadingProviders>
-      <html lang="en">
-        <body className={inter.className}>
-          <div className="row">
-            <Sidebar sidebarShow={showHideSidebar} onClickSidebarShow={() => setShowHideSidebar(!showHideSidebar)} />
+    // <LoadingProviders>
+    <html lang="en">
+      <body className={inter.className}>
+        <div className="row">
+          <Sidebar sidebarShow={showHideSidebar} onClickSidebarShow={() => setShowHideSidebar(!showHideSidebar)} />
 
-            <div className={showHideSidebar ? "content sidebar-dekstop" : "content-full sidebar-responsive"}>
-              <TopBar onClickSidebarShow={() => setShowHideSidebar(!showHideSidebar)} username="Apip Rahman S" />
+          <div className={showHideSidebar ? "content sidebar-dekstop" : "content-full sidebar-responsive"}>
+            <TopBar onClickSidebarShow={() => setShowHideSidebar(!showHideSidebar)} username="Apip Rahman S" />
 
-              {/* Content Here */}
-              {children}
-            </div>
+            {/* Content Here */}
+            {children}
           </div>
-        </body>
-      </html>
-    </LoadingProviders>
+        </div>
+      </body>
+    </html>
+    // </LoadingProviders>
   );
 }
