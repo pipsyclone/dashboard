@@ -1,16 +1,14 @@
-import Settings from "@/app/pages/dashboard/Settings";
+import SettingsComponent from "@/app/pages/dashboard/Settings";
 
 export const metadata = {
     title: 'Settings',
     description: 'Setting your data!'
 }
 
-const SettingsDashboard = () => {
+export default function Settings() {
     return (
         <>
-            <Settings />
+            <SettingsComponent />
         </>
     )
 }
-
-export default SettingsDashboard;

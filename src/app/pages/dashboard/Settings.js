@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 
-const Settings = () => {
+export default function SettingsComponent() {
     const [menu, setMenu] = useState('profile')
     return (
         <>
@@ -30,8 +30,6 @@ const Settings = () => {
         </>
     )
 }
-
-export default Settings;
 
 const ProfileCard = () => {
     return (

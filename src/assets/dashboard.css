@@ -113,6 +113,7 @@ aside .nav-list {
     gap: 10px;
     font-size: 12pt;
     color: var(--color-third);
+    padding: 5px;
 }
 
 .nav-list .nav-item .nav-link i {
@@ -169,7 +170,7 @@ aside .nav-list {
     background-color: #fff;
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    padding: 20px;
 }
 
 .topbar .topbar-list {
@@ -180,7 +181,6 @@ aside .nav-list {
 }
 
 .topbar-list .topbar-item .topbar-link {
-    padding: 10px;
     font-size: 10pt;
     color: var(--color-secondary)
 }

@@ -3,7 +3,7 @@ import CardStatistic from "@/app/components/CardStatistic";
 import DataTables from "@/app/components/DataTables";
 import Script from "@/assets/script";
 
-const Home = () => {
+export default function HomeComponent() {
     const { handleAlert } = Script()
     return (
         <>
@@ -48,5 +48,3 @@ const Home = () => {
         </>
     )
 }
-
-export default Home;

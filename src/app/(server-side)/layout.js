@@ -1,6 +1,6 @@
 'use client'
-import './../../assets/globals.css';
-import './../../assets/dashboard.css';
+import '@/assets/globals.css';
+import '@/assets/dashboard.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { Inter } from "next/font/google";
 
