@@ -1,4 +1,4 @@
-import './../../assets/loadingDB.css';
+import '@/assets/loadingDB.css';
 
 export default function Loading() {
     return (

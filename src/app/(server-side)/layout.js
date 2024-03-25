@@ -8,14 +8,14 @@ import Script from '@/assets/script';
 
 import Sidebar from '../components/SideBar';
 import TopBar from '../components/TopBar';
-import LoadingProviders from '../utils/LoadingProviders';
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function DashboardLayout({ children }) {
   const { showHideSidebar, setShowHideSidebar } = Script()
+
   return (
-    // <LoadingProviders>
+    // <Suspense fallback={<Loading />}>
     <html lang="en">
       <body className={inter.className}>
         <div className="row">
@@ -30,6 +30,6 @@ export default function DashboardLayout({ children }) {
         </div>
       </body>
     </html>
-    // </LoadingProviders>
+    // </Suspense>
   );
 }

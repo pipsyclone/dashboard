@@ -13,4 +13,4 @@ const HomeDashboard = () => {
     )
 }
 
-export default Home;
+export default HomeDashboard;

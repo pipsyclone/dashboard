@@ -1,6 +1,7 @@
 'use client'
 import Image from "next/image";
 import imagUser from "./../../assets/image/user.png"
+import Link from "next/link";
 
 const TopBar = (props) => {
     return (
@@ -11,10 +12,10 @@ const TopBar = (props) => {
 
             <ul className="topbar-list">
                 <li className="topbar-item">
-                    <a href="/settings" className="topbar-link topbar-profile">
+                    <Link href={'/settings'} className="topbar-link topbar-profile">
                         <Image src={imagUser} width={25} alt="User Image" />
                         Hi, {props.username}
-                    </a>
+                    </Link>
                 </li>
             </ul>
         </nav>
